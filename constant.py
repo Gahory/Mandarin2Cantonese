@@ -1,0 +1,10 @@
+encoding = 'utf-8'
+suffix = '%Y%m%d%H%M%S.txt'  # 文件后缀
+polyphony_cache = set()
+polyphony_file = 'resources/polyphony.json'  # 多音字字典文件
+polyphony_ignore_file = 'resources/polyphony_ignore.json'  # 多音字忽略字典文件
+polyphony_temp = 'resources/temp.txt'   # 多音字临时文件
+polyphony_ignore_temp = 'resources/ignore.txt'   # 多音字忽略文件
+polyphony_flag = True  # 是否处理多音字
+mandarin_file = 'mandarin.txt'  # 源文件
+output_dir = 'output'  # 输出文件目录
