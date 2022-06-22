@@ -18,14 +18,24 @@ def update(file_from, file_to):
         try:
             polyphony_dict = json.load(f)
         except Exception as e:
-            print(str(e))
-            polyphony_dict = {}
+            print('{}'.format(e))
+            f.seek(0)
+            if f.read() == '':
+                polyphony_dict = {}
+            else:
+                sys.exit(0)
         before = len(polyphony_dict)
-        with open(file_from, 'r', encoding='utf-8') as t:
-            for line in t:
-                strings = line.replace('\n', '').split(':')
-                polyphony_dict[strings[0]] = len(strings) > 1 and strings[1] or 'NA'
-                print('添加{}'.format(strings))
+        with open(file_from, 'r+', encoding='utf-8') as t:
+            try:
+                for line in t:
+                    strings = line.replace('\n', '').split(':')
+                    polyphony_dict[strings[0]] = len(strings) > 1 and strings[1] or 'NA'
+                    print('添加{}'.format(strings))
+            except Exception as e:
+                print('{}:{}'.format(e, line))
+            else:
+                t.truncate(0)
+                t.flush()
         f.truncate(0)
         f.flush()
         json.dump(polyphony_dict, f)

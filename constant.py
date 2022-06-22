@@ -1,5 +1,6 @@
 encoding = 'utf-8'
 suffix = '%Y%m%d%H%M%S.txt'  # 文件后缀
+cantonese_dict_file = 'resources/cantonese_dict.json'  # 本地字典
 polyphony_cache = set()
 polyphony_file = 'resources/polyphony.json'  # 多音字字典文件
 polyphony_ignore_file = 'resources/polyphony_ignore.json'  # 多音字忽略字典文件
