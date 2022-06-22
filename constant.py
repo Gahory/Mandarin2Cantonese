@@ -8,4 +8,5 @@ polyphony_temp = 'resources/temp.txt'   # 多音字临时文件
 polyphony_ignore_temp = 'resources/ignore.txt'   # 多音字忽略文件
 polyphony_flag = True  # 是否处理多音字
 mandarin_file = 'mandarin.txt'  # 源文件
-output_dir = 'output'  # 输出文件目录
+output_dir = 'resources/lyrics/cantonese'  # 输出文件目录
+lyrics_dir = 'resources/lyrics/mandarin'  # 歌词目录
